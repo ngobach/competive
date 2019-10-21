@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+g++ -DLOCAL -o main $1
+./main
