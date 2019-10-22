@@ -1,5 +1,4 @@
-// MacOS Fix
-#ifndef LOCAL
+#ifndef __APPLE__
 #include <bits/stdc++.h>
 #else
 #include "../stdcpp.h"
