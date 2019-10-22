@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 set -e
-clear
+
+if [[ -z "$1" ]]; then
+    echo "No file provided. Skip" 1>&2
+    exit 1
+fi
+
 echo ":: Compiling $1"
-g++ -DLOCAL -o main $1
+g++ -DLOCAL -o main "$1"
+
 touch input.txt
-echo -e "\n"
 echo ":: Executing main"
 ./main "$@" < input.txt
 echo -e "\n"
