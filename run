@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 set -e
+clear
+echo ":: Compiling $1"
 g++ -DLOCAL -o main $1
-./main
+touch input.txt
+echo -e "\n"
+echo ":: Executing main"
+./main "$@" < input.txt
+echo -e "\n"
